@@ -76,13 +76,11 @@ h1,h2 {
 .delete:hover {
     background: maroon;
 }
-
 #add-movie {
     width: 600px;
     margin: 0 auto;
     overflow: hidden;
 }
-
 #add-movie input {
     display: inline-block;
     margin: 20px 0;

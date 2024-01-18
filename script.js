@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.target.className == "delete") {
       const li = e.target.parentElement;
       li.parentNode.removeChild(li);
+
+      const index = Array.from(li.children).indexOf(li);
+      // Retrieve existing movies from local storage
+      const movies = JSON.parse(localStorage.getItem("movies")) || [];
+      // Remove the movie at the specified index
+      movies.splice(index, 1);
+      localStorage.setItem("movies", JSON.stringify(movies));
     }
   });
   // add movies
